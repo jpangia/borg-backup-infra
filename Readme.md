@@ -23,9 +23,20 @@ sudo apt install borgbackup
 create an ssh keypair for between the client and server
 ```
 [ssh key gen commands here]
+ssh-copy-id <rest>
 ```
 
-If this is the first time, run `pyborg.py init <fill in the rest>` to create a new repository
+set up the venv with the dependencies
+```
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -r requirements.txt
+```
+
+
+If this is the first time, run `main.py init <fill in the rest>` to create a new repository
+
+
 
 ## server
 ### RaspberyPiOS

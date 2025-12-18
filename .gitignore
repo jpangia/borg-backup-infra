@@ -1,3 +1,5 @@
+.venv
+
 .env
 cfg.json
 notes/nas-backup-pi.md
