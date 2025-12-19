@@ -7,21 +7,21 @@ def backup_home():
     Creates a backup of the home directory
     """
 
-    borg.singleton_init()
+    borg.ensure_init()
     pass
 
 def backup_more():
     """
     Creates a backup of the More drive
     """
-    borg.singleton_init()
+    borg.ensure_init()
     pass
 
 def backup_windows():
     """
     Creates a backup of the Windows drive
     """
-    borg.singleton_init()
+    borg.ensure_init()
     pass
 
 def main():

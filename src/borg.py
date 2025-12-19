@@ -1,4 +1,4 @@
-def singleton_init():
+def ensure_init():
     """
     
     """

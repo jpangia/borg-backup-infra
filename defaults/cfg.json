@@ -1,0 +1,20 @@
+{
+    "server_user": "pi",
+    "server_hostname": "borg-pi",
+    "weekly_copies": 4,
+    "env_path": "/home/jpangia/Documents/personal-projects/borg-backup-infra/.env",
+    "backup_targets": [
+        {
+            "name": "tumpa2-kubuntu-home-dr",
+            "path": "/home/jpangia"
+        },
+        {
+            "name": "tumpa2-more-dr",
+            "path": "/media/jpangia/More"
+        },
+        {
+            "name": "tumpa2-windows-dr",
+            "path": "/media/jpangia/Acer"
+        }
+    ]
+}
