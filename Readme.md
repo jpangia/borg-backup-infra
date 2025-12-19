@@ -22,8 +22,10 @@ sudo apt install borgbackup
 
 create an ssh keypair for between the client and server
 ```
-[ssh key gen commands here]
-ssh-copy-id <rest>
+ssh-keygen -t ed25519 -f <path to output private key file> -C "some comment probably with your email"
+# enter the key passphrase in the prompts and set that value to the BORG_SSH_KEY_PASSWD variable in `.env`
+ssh-copy-id <user>@<server-hostname>
+TODO: finish the hardening notes
 ```
 
 set up the venv with the dependencies
@@ -85,20 +87,7 @@ source .env
 it populates the necessary env variables for simple connection to the borg
 
 # TODO
-- [ ] add an fstab entry to mount the zfs pool
-
-- [ ] in script main: error, log to the config, and write a file to the desktop if the ip of the server changed or the server is unreachable
-- [ ] make init check for if the repo exists
-- [ ] backup script should add the key to ssh_agent at start. hopefully we can pass the password programatically to the ssh agent
-- [ ] write an error log file to a configurable file location if something goes wrong (default to writing error to the desktop)
-
-# left off doing:
-next thing: run a backup of the windows drive with the `-s` switch
-- create the zfs pool on the hard drive
-- mount the zfs drive to the pi
-- make folder in zfs drive for each drive
-- make repo for windows backup
-- run backup
+see [issues](https://github.com/jpangia/borg-backup-infra/issues)
 
 # Potential future features?
 - extract and mount commands in the python script
