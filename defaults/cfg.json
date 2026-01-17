@@ -1,6 +1,12 @@
 {
-    "server_user": "pi",
-    "server_hostname": "borg-pi",
+    "server": {
+        "user": "pi",
+        "hostname": "borg-pi",
+        "backup_root": "/home/pi/mnt/blomp-nas"
+    },
+    "log_path": "/home/jpangia",
+    "key_to_server_path": "",
+
     "weekly_copies": 4,
     "env_path": "/home/jpangia/Documents/personal-projects/borg-backup-infra/.env",
     "backup_targets": [
